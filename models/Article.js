@@ -15,6 +15,21 @@ var ArticleSchema = new Schema({
   link: {
     type: String,
     required: true
+  },
+  snippet: {
+      type: String,
+  },
+  note: {
+    type: Schema.Types.ObjectId,
+    ref: "Note"
+  },
+  isSaved: {
+      type: Boolean,
+      default: false
+  },
+  articleCreated: {
+      type: Date,
+      default: Date.now
   }
 });
 
